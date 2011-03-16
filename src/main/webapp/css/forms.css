@@ -1,0 +1,40 @@
+div.heading {
+	margin-left: 20%;
+}
+
+form {
+	margin-left:20%;
+	width: 560px;
+}
+
+input {
+	display: block;
+}
+
+label {
+	display: block;
+}
+
+fieldset {
+	background-color: rgba(169,169,169,0.9);
+}
+
+fieldset div {
+	margin: 10px 0 15px 0;
+}
+
+fieldset div input {
+	font-size: 150%;
+	width: 80%;
+}
+
+fieldset div input#submit {
+	float: left;
+	margin-right: 20px;
+	width: 60%;
+	
+}
+
+field div a {
+	vertical-align: text-bottom;
+}
