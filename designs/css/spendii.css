@@ -1,0 +1,66 @@
+html {
+	background-color: #797979
+}
+
+body {
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	background-color: #a5d282;
+	margin: 0 0 0 0;
+}
+
+span.slogan {
+	font-size: 40%;
+	color: #fffeff;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+div.header {
+	font-size: 200%;
+	background-color: #797979;
+	color: white;
+}
+
+div.header h2 {
+	margin: 0 0 20px 0;
+}
+
+div.heading {
+	margin: 0 0 10px 0;
+	font-size: 150%;
+}
+
+div.content {
+	font-size: 100%;
+}
+
+div#errors {
+	padding: 10px;
+	background: #ffb143;
+	color: white;
+	margin-bottom: 10px;
+}
+
+div#messages {
+	padding: 10px;
+	background: #fcfb8d;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div.footer {
+	background-color: #797979;
+	padding: 10px 0 10px 0;
+	text-align: center;
+}
+
+div.content_container {
+	margin: 10%;
+}
+
+div.footer span {
+	font-size: 60%;
+	font-style: italic;
+	color: #fffeff;
+	text-decoration: underline;
+}
