@@ -1,73 +1,18 @@
+/*
+ * Copyright 2010 Sanjiv Sahayam
+ * Licensed under the Apache License, Version 2.0
+ */
+
 package spendii
 
 import org.scalatra._
 import scalate.ScalateSupport
 
-class SpendiiServlet extends ScalatraServlet with ScalateSupport {
-
-  import scala.xml.NodeSeq
-
-  object Paths {
-    val loginTemplate = "/WEB-INF/scalate/templates/login.scaml"
-  }
-
-  get("/ping") {
-    <html>
-      <body>
-        <h1>You Pinged Me!</h1>
-      </body>
-    </html>
-  }
-
-  get("/") {
-    contentType = "text/html"
-    templateEngine.layout(Paths.loginTemplate)
-  }
-
-  post("/") {
-    case class User(username:String, password:String)
-    val validation = for {
-     u <- params.get("username")
-     p <- params.get("password")
-    } yield User(u, p)
-
-    lazy val onError = gotoLogin("The supplied username and password were incorrect.")
-
-    fold(validation)(onError) { user =>
-      if (user.username == "admin" && user.password == "admin2010") successfulLogin
-      else onError
-    }
-  }
-
-  private def successfulLogin: Any = {
-    <html>
-      <body>
-        <h1>You logged in Successfuly</h1>
-      </body>
-    </html>
-  }
-  private def fold[T, R](op:Option[T])(none: => R)(some: T => R): R = op match {
-    case Some(value) => some(value)
-    case None => none
-  }
-
-  private def gotoLogin(message:String): Any = {
-    contentType = "text/html"
-    templateEngine.layout(Paths.loginTemplate, Map("errors" -> message))
-  }
-
-  notFound {
-    <html>
-      <head>
-        <link type="text/css" rel="stylesheet" href="css/404.css" media="screen" />
-      </head>
-      <body>
-        <h1>The page you requested could not be found</h1>
-        <div class="errorLogo">
-          <img src="images/404.jpg"/>
-        </div>
-        <h3>You might be a little lost.</h3>
-      </body>
-    </html>
-  }
-}
+class SpendiiServlet
+        extends ScalatraServlet with
+                ScalateSupport with
+                WebConstants with
+                Welcome with
+                Ping with
+                Login with
+                NotFound
