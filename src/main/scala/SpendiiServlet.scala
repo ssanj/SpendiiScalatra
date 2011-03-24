@@ -31,9 +31,11 @@ class SpendiiServlet extends ScalatraServlet with ScalateSupport {
      p <- params.get("password")
     } yield User(u, p)
 
-    fold(validation)(gotoLogin("The supplied username and password were incorrect.")) { user =>
+    lazy val onError = gotoLogin("The supplied username and password were incorrect.")
+
+    fold(validation)(onError) { user =>
       if (user.username == "admin" && user.password == "admin2010") successfulLogin
-      else gotoLogin("There was problem retrieving your user credentials")
+      else onError
     }
   }
 
@@ -51,7 +53,7 @@ class SpendiiServlet extends ScalatraServlet with ScalateSupport {
 
   private def gotoLogin(message:String): Any = {
     contentType = "text/html"
-    templateEngine.layout(Paths.loginTemplate)
+    templateEngine.layout(Paths.loginTemplate, Map("errors" -> message))
   }
 
   notFound {

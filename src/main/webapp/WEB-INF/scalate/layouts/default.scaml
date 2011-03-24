@@ -1,5 +1,7 @@
 -@ val contentTitle:String = "Your content Heading"
 -@ val body:String = "Content goes here"
+-@ val errors:String = "N/A"
+-@ val messages:String = "N/A"
 
 !!! Strict
 %html(xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en")
@@ -14,6 +16,8 @@
         Spendii
         %span.slogan watching your pennies for you
     .content_container
+      #errors= errors
+      #messages= messages
       .heading= contentTitle
       .content
         != body
