@@ -11,7 +11,7 @@ body {
 span.slogan {
 	font-size: 40%;
 	color: #fffeff;
-	text-decoration: overline;
+	text-decoration: underline;
 	font-weight: bold;
 }
 
@@ -32,6 +32,20 @@ div.heading {
 
 div.content {
 	font-size: 100%;
+}
+
+div#errors {
+	padding: 10px;
+	background: #ffb143;
+	color: white;
+	margin-bottom: 10px;
+}
+
+div#messages {
+	padding: 10px;
+	background: #fcfb8d;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 div.footer {

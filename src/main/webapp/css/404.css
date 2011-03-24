@@ -1,4 +1,9 @@
-div img {
-    width: 320;
-    height: 240;
+/* overridden from spendii.css */
+div.heading {
+	text-align: center;
+}
+
+/* overridden from spendii.css */
+div.content {
+	text-align: center;
 }
