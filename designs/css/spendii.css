@@ -8,6 +8,37 @@ body {
 	margin: 0 0 0 0;
 }
 
+div#menu {
+	margin-left: 60%;
+	text-align: left;
+	width: 40%;
+	background: #797979;
+	padding-top: 22px;
+}
+
+div#menu ul {
+	list-style: none;
+	padding: 5px;
+	border-bottom-color: white;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+div#menu ul > li {
+	display: inline-block;
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
+	border-bottom: 0px;
+	border-top: 0px;
+	border-right: 0px;
+	padding: 5px;
+}
+
+div#menu ul > li:first-child {
+	border-left: 0px;
+}
+
 span.slogan {
 	font-size: 40%;
 	color: #fffeff;
@@ -19,6 +50,8 @@ div.header {
 	font-size: 200%;
 	background-color: #797979;
 	color: white;
+	float: left;
+	width: 60%;
 }
 
 div.header h2 {
