@@ -44,3 +44,20 @@ fieldset div input#submit {
 field div a {
 	vertical-align: text-bottom;
 }
+
+div.checkboxesHorizontal label {
+	display: inline;
+	width: 50px;
+	padding-right: 20px;
+}
+
+div.checkboxesHorizontal input {
+	display: inline;
+	width: 20px;
+}
+
+div.checkboxHeading {
+	width: 80%;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}

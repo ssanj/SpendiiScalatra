@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" >
+<head> 
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Spendii</title>
+	<link type="text/css" rel="stylesheet" href="css/spendii.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="css/forms.css" media="screen" />
+</head> 
+<body>
+	<div class="header">
+		<h2>Spendii <span class="slogan">watching your pennies for you</span></h2>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="">About</a></li>
+		</ul>
+	</div>	
+	<div class="content_container">
+		<div id="errors">
+			Your Errors
+		</div>
+		<div id="messages">
+			Welcome to Spendii. As this is the first time you have logged into the system
+			you need to create an Administrative User to administer the system.
+		</div>		
+		<div class="heading">
+		Create a User
+		</div>
+		<div class="content">
+		<div class="login_form">
+			<form action="" method="">
+			<fieldset>
+				<div>
+					<label for="username">Username</label>
+					<input type="text" name="username" id="username" />
+				</div>
+				<div>
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password" />
+				</div>
+				<div>
+					<label for="verification">Verify Password</label>
+					<input type="password" name="verification" id="verification" />
+				</div>
+				<div class="checkboxHeading">
+					Role
+				</div>	
+				<div class="checkboxesHorizontal">
+					<input type="checkbox" name="admin" value="Admin" checked disabled/>
+					<label for="admin">Admin</label>									
+					<input type="checkbox" name="user" value="User" />										
+					<label for="user">User</label>
+				</div>			
+				<div>
+					<input type="submit" value="Create User" name="submit" id="submit"/>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+		</div>
+	</div>
+	<div class="footer">
+		<span>(c) Sanjiv Sahayam 2011</span>
+	</div>
+</body>
+</html>
