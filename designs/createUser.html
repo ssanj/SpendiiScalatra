@@ -17,42 +17,36 @@
 	</div>	
 	<div class="content_container">
 		<div id="errors">
-			Your Errors
+			<ol>
+				<li>The password specified did not match the verification</li>
+			</ol>
 		</div>
 		<div id="messages">
-			Welcome to Spendii. As this is the first time you have logged into the system
-			you need to create an Administrative User to administer the system.
+			Welcome to Spendii! 
+			As this is the first time you have logged into the system
+			you will need to create a User to administer the system.
 		</div>		
 		<div class="heading">
-		Create a User
+		Create an Administrator
 		</div>
 		<div class="content">
 		<div class="login_form">
 			<form action="" method="">
 			<fieldset>
 				<div>
-					<label for="username">Username</label>
-					<input type="text" name="username" id="username" />
+					<label for="username">Administrator Name</label>
+					<input type="text" name="username" id="username" class="valid"/>
 				</div>
 				<div>
 					<label for="password">Password</label>
-					<input type="password" name="password" id="password" />
+					<input type="password" name="password" id="password" class="fieldError"/>
 				</div>
 				<div>
 					<label for="verification">Verify Password</label>
-					<input type="password" name="verification" id="verification" />
+					<input type="password" name="verification" id="verification" class="valid"/>
 				</div>
-				<div class="checkboxHeading">
-					Role
-				</div>	
-				<div class="checkboxesHorizontal">
-					<input type="checkbox" name="admin" value="Admin" checked disabled/>
-					<label for="admin">Admin</label>									
-					<input type="checkbox" name="user" value="User" />										
-					<label for="user">User</label>
-				</div>			
 				<div>
-					<input type="submit" value="Create User" name="submit" id="submit"/>
+					<input type="submit" value="Create Administrator" name="submit" id="submit"/>
 				</div>
 			</fieldset>
 			</form>

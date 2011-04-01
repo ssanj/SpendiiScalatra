@@ -61,3 +61,9 @@ div.checkboxHeading {
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 }
+
+input.fieldError {
+	border-bottom-style: solid;
+	border-bottom-width: 5px;
+	border-bottom-color: #ffb143;
+}
