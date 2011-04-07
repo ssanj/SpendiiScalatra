@@ -2,7 +2,7 @@
 - attributes("messages") = "Welcome to Spendii! As this is the first time you have logged into the system you will need to create a User to administer the system."
 
 .login_form
-  %form(action="/" method="post")
+  %form(action="/createFirstUser" method="post")
     %fieldset
       %div
         %label(for="username") Administrator Name

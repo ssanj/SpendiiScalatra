@@ -13,6 +13,7 @@ class SpendiiServlet
                 ScalateSupport with
                 WebConstants with
                 Welcome with
+                CreateFirstUser with
                 Ping with
                 Login with
                 NotFound with

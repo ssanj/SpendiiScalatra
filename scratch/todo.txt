@@ -1,0 +1,7 @@
+1. Add logged in user to the session.
+2. Add logout functionality.
+3. Guard createFirstUser with a query to allow it only when there are no users in the system.
+4. Stabilize the url (which changes on each invocation)(maybe use a redirect instead).
+5. Add field validation for form fields on the server.
+6. Add field validation for form field via JS.
+7. Hide error and messages fields if there are no errors/messages.

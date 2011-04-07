@@ -14,7 +14,7 @@ trait Welcome { this:ScalatraServlet with ScalateSupport with WebConstants with 
   import User._
   get("/") {
     var result:String = Paths.genericErrorTemplate //standard error page to be defined?
-    (onDb ~~> ( find * User where (usernameField === ("*"/)) constrainedBy (Limit(1)) withResults { users =>
+    (onDb ~~> ( find * User where (usernameField === (".*"/)) constrainedBy (Limit(1)) withResults { users =>
       result = Paths.loginTemplate
       None
     } withoutResults {

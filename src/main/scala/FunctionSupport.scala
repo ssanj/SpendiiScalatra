@@ -13,4 +13,9 @@ trait FunctionSupport { this:ScalateSupport =>
     contentType = "text/html"
     templateEngine.layout(uri, attributes)
   }
+
+  def gotoWithError(uri:String, error:String): Any = {
+    contentType = "text/html"
+    templateEngine.layout(uri, Map[String, Any]("errors" -> error))
+  }
 }
