@@ -4,4 +4,4 @@
 4. Stabilize the url (which changes on each invocation)(maybe use a redirect instead).
 5. Add field validation for form fields on the server.
 6. Add field validation for form field via JS.
-7. Hide error and messages fields if there are no errors/messages.
+7. Hide error and messages fields if there are no errors/messages.  (done)
