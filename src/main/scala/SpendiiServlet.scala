@@ -15,4 +15,6 @@ class SpendiiServlet
                 Welcome with
                 Ping with
                 Login with
-                NotFound
+                NotFound with
+                AkuruSupport with
+                FunctionSupport

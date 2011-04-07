@@ -6,6 +6,8 @@ class MyProject(info: ProjectInfo) extends DefaultWebProject(info) {
   lazy val scalate = "org.scalatra" %% "scalatra-scalate" % scalatraVersion withSources()
   lazy val servletApi = "org.mortbay.jetty" % "servlet-api" % "2.5-20081211" % "provided"
   lazy val scalate_sources = "org.fusesource.scalate" % "scalate-core" % "1.4.1" withSources()
+  lazy val auth = "org.scalatra" %% "scalatra-auth" % scalatraVersion withSources()
+  lazy val akuru = "com.github.ssanj" %% "akuru" % "0.0.1"
 
   // Alternatively, you could use scalatra-specs
   lazy val scalatest = "org.scalatra" %% "scalatra-test" % scalatraVersion % "test" withSources()

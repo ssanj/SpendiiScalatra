@@ -1,0 +1,17 @@
+- attributes("contentTitle") = "Create An Administrator"
+- attributes("messages") = "Welcome to Spendii! As this is the first time you have logged into the system you will need to create a User to administer the system."
+
+.login_form
+  %form(action="/" method="post")
+    %fieldset
+      %div
+        %label(for="username") Administrator Name
+        %input(type="text" name="username" id="username")
+      %div
+        %label(for="password") Password
+        %input(type="password" name="password" id="password")
+      %div
+        %label(for="verification") Verify Password
+        %input(type="password" name="verification" id="verification")
+      %div
+        %input(type="submit" value="Create Administrator" name="submit" id="submit")

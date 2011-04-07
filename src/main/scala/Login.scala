@@ -7,35 +7,27 @@ package spendii
 
 import org.scalatra.scalate.ScalateSupport
 import org.scalatra.ScalatraServlet
+import akuru._
 
-trait Login { this:ScalatraServlet with ScalateSupport with WebConstants =>
+trait Login { this:ScalatraServlet with ScalateSupport with WebConstants with AkuruSupport with FunctionSupport =>
+
+  lazy val onError = gotoLogin("The supplied username and password were incorrect.")
 
   post("/") {
-    case class User(username:String, password:String)
+    import User._
     val validation = for {
      u <- params.get("username")
      p <- params.get("password")
-    } yield User(u, p)
+    } yield User(usernameField === u, passwordField === p)
 
-    lazy val onError = gotoLogin("The supplied username and password were incorrect.")
-
-    fold(validation)(onError) { user =>
-      if (user.username == "admin" && user.password == "admin2010") successfulLogin
-      else onError
-    }
+    validateLogin(validation)(onError)
   }
 
-  private def successfulLogin: Any = {
-    contentType = "text/html"
-    templateEngine.layout(Paths.homeTemplate, Map("username" -> "admin"))
-  }
-  private def fold[T, R](op:Option[T])(none: => R)(some: T => R): R = op match {
-    case Some(value) => some(value)
-    case None => none
+  private def validateLogin(validation:Option[User])(onError: => Any): Any = {
+    validation fold (onError, user => if (user.username.value == "admin" && user.password.value == "admin2010") successfulLogin else onError)
   }
 
-  private def gotoLogin(message:String): Any = {
-    contentType = "text/html"
-    templateEngine.layout(Paths.loginTemplate, Map("errors" -> message))
-  }
+  private def successfulLogin: Any =  goto(Paths.homeTemplate, Map("username" -> "admin"))
+
+  private def gotoLogin(message:String): Any = goto(Paths.loginTemplate, Map("errors" -> message))
 }
