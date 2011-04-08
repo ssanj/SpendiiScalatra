@@ -13,6 +13,11 @@ div#messages {
 	width: 540px;
 }
 
+div#errors {
+	margin-left:20%;
+	width: 540px;
+}
+
 input {
 	display: block;
 }
@@ -62,8 +67,14 @@ div.checkboxHeading {
 	border-bottom-width: 1px;
 }
 
-input.fieldError {
+input.error {
 	border-bottom-style: solid;
 	border-bottom-width: 5px;
 	border-bottom-color: #ffb143;
+}
+
+input.valid {
+	border-bottom-style: solid;
+	border-bottom-width: 5px;
+	border-bottom-color: #a5d282;	
 }

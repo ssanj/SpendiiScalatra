@@ -5,6 +5,10 @@
 	<title>Spendii</title>
 	<link type="text/css" rel="stylesheet" href="css/spendii.css" media="screen" />
     <link type="text/css" rel="stylesheet" href="css/forms.css" media="screen" />
+   <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+   <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+    <script src="scripts/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/spendii.js" type="text/javascript" charset="utf-8"></script>
 </head> 
 <body>
 	<div class="header">
@@ -17,9 +21,7 @@
 	</div>	
 	<div class="content_container">
 		<div id="errors">
-			<ol>
-				<li>The password specified did not match the verification</li>
-			</ol>
+			N/A
 		</div>
 		<div id="messages">
 			Welcome to Spendii! 
@@ -31,19 +33,19 @@
 		</div>
 		<div class="content">
 		<div class="login_form">
-			<form action="" method="">
+			<form action="" method="" id="firstUser">
 			<fieldset>
 				<div>
 					<label for="username">Administrator Name</label>
-					<input type="text" name="username" id="username" class="valid"/>
+					<input type="text" name="username" id="username"/>
 				</div>
 				<div>
 					<label for="password">Password</label>
-					<input type="password" name="password" id="password" class="fieldError"/>
+					<input type="password" name="password" id="password"/>
 				</div>
 				<div>
 					<label for="verification">Verify Password</label>
-					<input type="password" name="verification" id="verification" class="valid"/>
+					<input type="password" name="verification" id="verification"/>
 				</div>
 				<div>
 					<input type="submit" value="Create Administrator" name="submit" id="submit"/>
